@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        /* Enter your code here. Print output to STDOUT. */
+        int n = A.length() + B.length();
+        System.out.println(n);
+        int c = A.compareTo(B);
+        if(c>0){
+            System.out.println("Yes");
+        }
+        else
+            System.out.println("No");
+    String firstLetter = A.substring(0, 1);
+    String remainingLetters = A.substring(1, A.length());
+
+    // change the first letter to uppercase
+    firstLetter = firstLetter.toUpperCase();
+
+    // join the two substrings
+    A = firstLetter + remainingLetters;
+    firstLetter = B.substring(0, 1);
+    remainingLetters = B.substring(1, B.length());
+
+    // change the first letter to uppercase
+    firstLetter = firstLetter.toUpperCase();
+
+    // join the two substrings
+    B = firstLetter + remainingLetters;
+    System.out.println(A + " " + B);
+    }
+}
+
+
+
